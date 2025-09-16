@@ -11,7 +11,7 @@ body{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-color: #f0f2f5;
+    background-color: #edf0f3;
     text-align: center;
 }
 .container{
@@ -121,7 +121,7 @@ footer{
 }
 @media(max-width:500px){
     body{
-        background-color: #021532;
+        background-color: #021634;
         color: white;
     }
     .container{
