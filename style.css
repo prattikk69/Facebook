@@ -104,7 +104,7 @@ a{
 }
 #new button{
     background-color: rgb(25, 252, 0);
-    width: 20vw;
+    width: clamp(190px,20vw,220px);
     font-size: small;
 }
 footer{
