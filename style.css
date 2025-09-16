@@ -1,0 +1,142 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+body{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #f0f2f5;
+    text-align: center;
+}
+.container{
+    height: 400px;
+    width: clamp(400px,40vw,500px);
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, .5);
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    background-color: white;
+}
+.container h2{
+    font-family: 'Poppins', sans-serif;
+    color: blue;
+    position: relative;
+    top: -10%;
+    font-size: clamp(20px,2rem,30px);
+}
+.container p{
+    font-size: smaller;
+    position: relative;
+    top: -9%;
+}
+form, input,button,a,p{
+    font-family: 'Roboto', sans-serif;
+}
+input{
+    margin: 5px;
+    position: relative;
+    width: clamp(250px,40vw,300px);
+    height: 35px;
+    padding: 10px;
+    border: none;
+    font-size: 15px;
+    border-radius: 5px;
+    color: black;
+}
+input:focus{
+    outline: none;
+    border: solid 1.5px black;
+}
+.passbox {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: clamp(250px,40vw,300px);
+}
+
+.passbox input {
+    width: clamp(250px,40vw,300px);
+    padding-right: 35px;
+}
+
+.passbox i {
+    position: absolute;
+    right: 10px;
+    font-size: 15px;
+    cursor: pointer;
+    display: none;
+}
+
+.passbox i.show {
+    display: block;
+}
+
+.container button{
+    height: 35px;
+    width: clamp(250px,40vw,300px);
+    font-size: 15px;
+    color: white;
+    margin: 5px;
+    border: none;
+    cursor: pointer;
+}
+#submit button{
+    background-color: blue;
+    border-radius: 5px;
+}
+a{
+    font-size: smaller;
+    text-decoration: none;
+    color: black;
+}
+#new button{
+    background-color: rgb(25, 252, 0);
+    width: 20vw;
+    font-size: small;
+}
+footer{
+    position: absolute;
+    bottom: 1%;
+    font-size: 10px;
+    width: 80%;
+    text-align: center;
+}
+#meta{
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+@media(max-width:500px){
+    body{
+        background-color: #021532;
+        color: white;
+    }
+    .container{
+        box-shadow: none;
+        background-color: transparent;
+    }
+    a{
+        color: white;
+    }
+    footer{
+        display: none;
+    }
+
+    input{
+        background-color: #021839;
+        color: white;
+    }
+}
