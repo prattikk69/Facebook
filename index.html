@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log in to Fatebook</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">  
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="favicon_io/site.webmanifes">
+</head>
+<body>
+    <div class="container">
+        <h2>facebook</h2>
+        <p>Log in to Facebook</p>
+        <p>English(UK)</p>
+        
+        <form action="https://www.facebook.com">
+            <div class="namebox">
+                <input type="text" placeholder="Email address or phone number"
+                required id="name" class="name">
+            </div>
+
+            <div class="passbox">
+                <input type="password" placeholder="Password" required
+                id="pass" class="pass" oninput="toggleIcon()">
+                <i class="fa-solid fa-eye" id="icon" onclick="togglePassword()"></i>
+            </div>
+
+            <div id="submit">
+                <button type="submit">Log in</button>
+            </div>
+
+            <div id="passforgot">
+                <a href="#">Forgotten account?</a>
+                <br>
+                <p>or</p>
+            </div>
+            <div id="new">
+                <button>Create new account</button>
+            </div>
+
+        </form>
+    </div>
+
+    <footer id="footerone">
+        <p>English (UK)
+            नेपाली
+            हिन्दी
+            Español
+            Português (Brasil)
+            日本語
+            Français (France)
+            Deutsch
+            Italiano
+            العربية
+            中文(简体)
+            <br>
+            
+            Sign UpLog inMessengerFacebook LiteVideoPlacesGamesMarketplaceMeta <br>PayMeta StoreMeta QuestRay-Ban MetaMeta AIInstagramThreadsFundraisersServicesVoting Information CentrePrivacy PolicyPrivacy CentreGroupsAboutCreate adCreate PageDevelopersCareersCookiesAdChoicesTermsHelpContact uploading and non-usersSettingsActivity log
+            Meta ©
+            <span id="year"></span>
+        </p>
+    </footer>
+
+    <div id="meta">
+        <p>Meta</p>
+    </div>
+
+
+    <script>
+        function toggleIcon() {
+            var input = document.getElementById('pass');
+            var icon = document.getElementById('icon');
+            if (input.value.length > 0) {
+                icon.classList.add('show');
+            } else {
+                icon.classList.remove('show');
+            }
+        }
+        function togglePassword() {
+            var input = document.getElementById('pass');
+            var icon = document.getElementById('icon');
+            if (input.type === 'password') {
+                input.type = 'text';
+                icon.classList.replace('fa-eye', 'fa-eye-slash');
+            } else {
+                input.type = 'password';
+                icon.classList.replace('fa-eye-slash', 'fa-eye');
+            }
+        }
+        const getYear = new Date().getFullYear();
+        const putYear = document.getElementById("year").textContent = getYear;
+</script>
+</body>
+</html>
